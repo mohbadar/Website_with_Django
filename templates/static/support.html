@@ -1,0 +1,50 @@
+{% extends 'layout/layout.html'%}
+
+{% block title%}{{super}} | Support {%endblock%}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+{% endblock%}
+
+{% block content%}
+
+
+{% load widget_tweaks %}
+<section class="container" style="margin-top:10%; margin-bottom:10%">
+
+<h2>Send Your Message</h2>
+<form method="POST" action="{% url 'support_save' %}" >
+
+{{ csrf_input }}
+
+{{ form.non_field_errors }}
+<div class="fieldWrapper form-group">
+    {{ form.name.errors }}
+    <label for="{{ form.name.id_for_label }}">Your Name:</label>
+    {{ form.name|add_class:"" }}
+</div>
+
+<div class="fieldWrapper">
+    {{ form.contact.errors }}
+    <label for="{{ form.contact.id_for_label }}">Your email address/Phone Number:</label>
+    {{ form.contact }}
+</div>
+
+
+<div class="fieldWrapper">
+    {{ form.message.errors }}
+    <label for="{{ form.message.id_for_label }}">Your message:</label>
+    {{ form.message }}
+</div>
+
+<div>
+    <button class="btn btn-success">Save Your Message</button>
+</div>
+
+</form>
+
+
+</section>
+
+
+{% endblock%}

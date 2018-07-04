@@ -1,0 +1,101 @@
+{% extends 'layout/layout.html' %}
+
+{% block title%}{{super}} | Researches {% endblock%}
+
+{% block content%}
+
+{% block css%}
+<style type="text/css">
+  .notice {
+    padding: 15px;
+    background-color: #fafafa;
+    border-left: 6px solid #7f7f84;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+            box-shadow: 0 5px 8px -6px rgba(0,0,0,.2);
+}
+.notice-sm {
+    padding: 10px;
+    font-size: 80%;
+}
+.notice-lg {
+    padding: 35px;
+    font-size: large;
+}
+.notice-success {
+    border-color: #80D651;
+}
+.notice-success>strong {
+    color: #80D651;
+}
+.notice-info {
+    border-color: #45ABCD;
+}
+.notice-info>strong {
+    color: #45ABCD;
+}
+.notice-warning {
+    border-color: #FEAF20;
+}
+.notice-warning>strong {
+    color: #FEAF20;
+}
+.notice-danger {
+    border-color: #d73814;
+}
+.notice-danger>strong {
+    color: #d73814;
+}
+
+.article:hover{
+  opacity: 0.3
+}
+h3{
+  color: #777
+}
+</style>
+
+{% endblock%}
+<section class="container" style="margin-top:10%">
+
+	<article class="row">
+	{% for article in articles%}
+  <a href="{% url 'article_detail' slug=article.slug %}" class="article">
+    <div class="notice notice-info">
+        <h3>{{article.title}}</h3> 
+        <p>{{article.content|slice:'50'}}</p>
+    </div>
+    </a> 
+	{% endfor%}
+
+  </article>
+
+
+
+{% if articles.has_other_pages %}
+  <ul class="pagination">
+    {% if articles.has_previous %}
+      <li><a href="?page={{ articles.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in articles.paginator.page_range %}
+      {% if users.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if articles.has_next %}
+      <li><a href="?page={{ articles.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
+</div>
+</div>
+</section>
+
+{% endblock%}

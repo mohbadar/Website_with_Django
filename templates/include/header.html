@@ -1,0 +1,85 @@
+  {% block content%}
+  <header id="main_menu" class="header navbar-fixed-top">
+            <div class="header_top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="nav">
+                                <div class="call_us_menu">
+
+                                    <div class="col-sm-8 col-xs-12">
+                                        <p>Do you need help ? Just Email, Live chat or Call us</p>  
+                                    </div>
+                                    <div class="col-sm-4 col-xs-5">
+                                        <div class="call_us_bottom">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-xs-6 no-padding">
+                                                    <div class="btn_left">
+                                                        <a href="/support" class="btn-primary">Contact Us</a>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-6 col-xs-6">
+                                                    <div class="phone_numbr">
+                                                        <a href="">02028-5012</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main_menu_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="nave_menu">
+                            <nav class="navbar navbar-default" id="#navmenu">
+                                <div class="container-fluid">
+                                    <!-- Brand and toggle get grouped for better mobile display -->
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                            <span class="sr-only">Toggle navigation</span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">
+                                            <img src="/assets/images/ajfgren_logo.jpg" alt="Logo" />
+                                        </a>
+                                    </div>
+
+                                    <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                        <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="/">Home</a></li>
+                                             <li><a href="{% url 'articles' %}">Researches</a></li>
+                                            <li><a href="/publication/news">News</a></li>
+                                            <li><a href="/publication/announcements">Announcements</a></li>
+                                            <li><a href="{% url 'archicture' %}">Network Archicture</a></li>
+                                            <li><a href="{% url 'about' %}">About Us</a></li>
+                                            <li><a href="{% url 'members' %} ">Members</a></li>
+                                            <li><a href="{% url 'support'%}">Support</a></li>
+                                            <li><a href="/system-administration-panel">Login</a></li>
+
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>	
+                    </div>
+
+                </div>
+
+            </div>
+        </header> <!--End of header -->
+
+        
+ {% endblock%}       

@@ -1,0 +1,66 @@
+{% extends 'layout/layout.html'%}
+
+{% block title%}{{super}} | About Us {%endblock%}
+
+{% block css %}
+	<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+{% endblock%}
+
+{% block content%}
+
+
+{% load widget_tweaks %}
+<section class="container" style="margin-top:13%; margin-bottom:10%">
+
+<article>
+    <div class="row">
+        <div class="">
+            <img src="/assets/images/afgren_banner.jpg" class="rounded" style="max-height: 400px; width=100% !important ">
+        </div>
+
+        <hr>
+
+        <div>
+            <h2>AfgREN</h2>
+            <p>Afghanistan Research and Education Network (AfgREN) is Afghanistan's national research and education network (REN). AfgREN serves Afghanistan's Research and Education community (Universities) through facilitating efficient exchanges of local traffic and providing international connectivity through peering arrangements with overseas RENs. The networks are dedicated for Research and Education (R&E) activities, such as E-Learning, video-conferences and research data management across international boundaries.</p>
+
+            <p>AfgREN is a project from Higher Education ministry of Afghanistan that aims to implement, manage and extend sustainable e-Infrastructures dedicated for the research and education communities and to boost scientific research and cooperation in member Universities through the provision of world-class e-Infrastructures and e-services.</p>
+
+
+            <p>The goal is to connect Afghanistan institutions and Universities among themselves and to the globe through high-speed data-communications networks. Such networks will enable sharing and access to a variety of research services and applications in addition to utilization of highly sophisticated and technologically advanced computing resources available only at very few institutions in the world. We aim to boost collaborative research and education projects and activities, contribute to promoting scientific research, innovation, and education across Afghanistan.</p>
+        </div>
+    </div>
+</article>
+
+<hr><hr>
+
+<article>
+    <div class="row">
+
+
+        <div>
+            <h2>Our Services</h2>
+           <ul>
+               <li>  Research and Education: AfgREN tries to build an infrastructure for all student and lecturers to have a research environment, such as library, research center and also stay them connected to the world.</li>
+
+               <li> Intranet: AfgREN has connected Universities in Afghanistan together to use services locally, Video conference is the most important one.</li>
+
+               <li>Advance IT Support</li>
+
+               <li>  Network Infrastructure Consultancy</li>
+
+               <li> Network and Security Training</li>
+
+               <li>Video conferencing </li>
+           </ul>
+
+
+        </div>
+    </div>
+</article>
+
+</section>
+
+
+
+{% endblock%}
